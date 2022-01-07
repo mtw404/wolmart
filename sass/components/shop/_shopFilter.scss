@@ -1,0 +1,306 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#shop-filter {
+    padding: 50px 0 3px 0;
+
+    .shop-filter-head {
+        margin-top: 11px;
+        h5 {
+            @include fs($cl1, 16px, 600, $ff1);
+            
+        }
+
+        a {
+            @include fs($cl1, 14px, 400, $ff1);
+        }
+    }
+
+    .shop-filter-slide {
+        .all-cat {
+            >ul {
+                position: relative;
+
+                >li {
+                    margin: 30px 0;
+                    position: relative;
+                    transition: all linear .3s;
+
+                    h4 {
+                        @include fs(#000, 16px, 600, $ff1);
+                        position: relative;
+                        display: inline-block;
+
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            left: 0;
+                            bottom: -15px;
+                            width: 100%;
+                            height: 2px;
+                            background: $cc1;
+                            cursor: pointer;
+                        }
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        right: 10px;
+                        top: 50%;
+                        width: 13px;
+                        height: 2px;
+                        background: #000000;
+                        transform: translateY(-50%);
+                        transition: all linear .2s;
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        right: 10px;
+                        top: 50%;
+                        width: 13px;
+                        height: 2px;
+                        background: #000000;
+                        transform: translateY(-50%);
+                        transition: all linear .2s;
+                    }
+                    &.collapsed {
+                        &::after {
+                            transform: rotate(180deg);
+                        }
+                        &::before {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                &::after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: -15px;
+                    width: 100%;
+                    height: 1px;
+                    background: #eee;
+                }
+            }
+        }
+        .shop-cat-item {
+            ul {
+                li {
+                    a {
+                        @include fs(#000, 14px, 400, $ff1);
+                        line-height: 30px;
+                        transition: linear.3s;
+                    }
+
+                    &:hover {
+                        a {
+                            color: $cc1;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .shop-product-head{
+        .head-left{
+            h5{
+                @include fs($cl1, 16px, 600, $ff1);
+                margin-right: 10px;
+                display: flex;
+                align-self: center;
+            }
+            select{
+                @include fs($cl1, 14px, 400, $ff1);
+                padding: 10px 15px;
+                background: transparent;
+                border: 1px solid #999;
+                border-radius: 5px;
+            }
+        }
+        .head-right{
+            select{
+                @include fs($cl1, 14px, 400, $ff1);
+                padding: 10px;
+                background: transparent;
+                border: 1px solid #999;
+                border-radius: 5px;
+                margin-right: 20px;
+            }
+            .product-head-icon{
+                a{
+                    margin: 5px;
+                    i{
+                        font-size: 30px;
+                        color: $cl1;
+                    }
+                    &:nth-child(2){
+                        i{
+                            color: #999;
+                            transition: all linear .3s;
+                        }
+                        
+                    }
+                    &:hover{
+                        &:nth-child(2){
+                            i{
+                                color: $cl1;
+                            }
+
+                        }
+                    }
+                    
+            
+                
+                }
+            }
+
+        }
+    }
+    .shop-product-main{
+        margin-top: 20px;
+        .product-img {
+            position: relative;
+            padding: 0;
+            margin-right: 15px;
+            transition: all linear .3s;
+            a {
+                display: block;
+                transition: linear .3s;
+
+                .last {
+                    display: none;
+                
+                }
+            }
+            .overlay {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+               
+
+                ul {
+                    padding: 10px 20px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translatex(-50%);
+                    z-index: 999;
+                    background: #fff;
+                    opacity: 0;
+                    transition: all linear .3s;
+
+                    li {
+                        margin: 0 3px;
+
+                        i {
+                            color: #999;
+                        }
+
+                        &:hover {
+                            i {
+                                color: $org;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+            &:hover {
+                .last {
+                    display: block;
+                }
+
+                .fast {
+                    display: none;
+                }
+
+                .overlay {
+                    ul {
+                        opacity: 1;
+                        bottom: 20px;
+                    }
+
+                }
+            }
+        }
+        .product-txt {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            p{
+                color: #000;
+            }
+            h4{
+                a{
+                    padding-top: 19px;
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: $ff1;
+                }
+            }
+            p{
+                a{
+                    color: #999;
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-family: $ff1;
+                }
+            }
+            .product_price{
+                h5{
+                    margin: 0 5px;
+                    color: $cc1;
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-family: $ff1;
+                    line-height: 27px;
+                }
+                .old{
+                    color: #999;
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-family: $ff1;
+                }
+            }
+            .rate-txt{
+                ul{
+                    li{
+                        margin: 0;
+                        i{
+                            color: $org;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    .pages{
+        margin-top: 39px;
+        p{
+            color: $cl1;
+            font-size: 12px;
+            font-weight: 400;
+            font-family: $ff1;
+            span{
+                font-weight: 600;
+            }
+        }
+        .pagination{
+            li{
+                .page-link{
+                    border: none;
+                }
+                a{
+                    color: #9c9a9a;
+                }
+            }
+        }
+     }
+}

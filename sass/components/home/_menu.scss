@@ -1,0 +1,697 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+#menu {
+    .menu-left {
+        >ul {
+            >li {
+                position: relative;
+
+                >a {
+                    color: #111;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding: 20px 20px;
+                    background: #f1f1f1;
+                    display: block;
+                    position: relative;
+
+                    >i:last-child {
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                    }
+                }
+
+                .left-menu-drop {
+                    background: #fff;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    z-index: 999;
+                    box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.3);
+
+                    ul {
+                        .first {
+
+                            >a {
+                                position: relative;
+
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    width: 240px;
+                                    height: 1px;
+                                    bottom: 0px;
+                                    left: -7px;
+                                    background: #eee;
+                                }
+
+                                .lefti {
+                                    position: absolute;
+                                    left: 213px;
+                                    top: 16px;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    color: black;
+                                    font-size: 12px;
+                                    transition: all linear .3s;
+                                }
+
+                            }
+
+                            &:hover {
+                                .lefti {
+                                    left: 219px;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+
+
+                        }
+
+
+                        .second {
+                            >a {
+                                position: relative;
+
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    width: 240px;
+                                    height: 1px;
+                                    bottom: 0px;
+                                    left: -7px;
+                                    background: #eee;
+                                }
+
+                                .lefti1 {
+                                    position: absolute;
+                                    left: 213px;
+                                    top: 16px;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    color: black;
+                                    font-size: 12px;
+                                    transition: all linear .3s;
+                                }
+
+
+                            }
+
+                            &:hover {
+                                .lefti1 {
+                                    left: 219px;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        .third {
+                            >a {
+                                position: relative;
+
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    width: 240px;
+                                    height: 1px;
+                                    bottom: 0px;
+                                    left: -7px;
+                                    background: #eee;
+                                }
+
+                                .lefti2 {
+                                    position: absolute;
+                                    left: 213px;
+                                    top: 16px;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    color: black;
+                                    font-size: 12px;
+                                    transition: all linear .3s;
+                                }
+                            }
+
+                            &:hover {
+                                .lefti2 {
+                                    left: 219px;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        .four {
+                            >a {
+                                position: relative;
+
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    width: 240px;
+                                    height: 1px;
+                                    bottom: 0px;
+                                    left: -7px;
+                                    background: #eee;
+                                }
+
+                                .lefti3 {
+                                    position: absolute;
+                                    left: 213px;
+                                    top: 16px;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    color: black;
+                                    font-size: 12px;
+                                    transition: all linear .3s;
+                                }
+                            }
+
+                            &:hover {
+                                .lefti3 {
+                                    left: 219px;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        li {
+                            position: relative;
+
+                            a {
+
+                                color: #111;
+                                margin-left: 21px;
+                                line-height: 39px;
+
+                                i:nth-child(1) {
+                                    margin-right: 8px;
+                                }
+
+                            }
+
+                            .left-mega-manu {
+                                width: 690px;
+                                background: #fff;
+                                position: absolute;
+                                left: 100%;
+                                top: -12px;
+                                display: none;
+                                box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.3);
+
+                                
+                                .list {
+                                    h4 {
+                                        color: #000;
+                                        text-transform: uppercase;
+                                        font-size: 15px;
+                                        margin-bottom: 5px;
+                                        color: #111;
+                                        margin-left: 19px;
+                                        padding-top: 15px;
+                                    }
+
+
+                                    ul {
+                                        border-top: 1px solid #eee;
+
+                                        li {
+
+                                            a {
+                                                color: #000;
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                                line-height: 32px;
+
+                                            }
+
+                                            &:hover a {
+                                                color: #369;
+
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                                .left-mega-img {
+                                    position: relative;
+
+                                    .overly {
+                                        position: absolute;
+                                        top: 32px;
+                                        left: 4%;
+
+                                        h4 {
+                                            text-transform: uppercase;
+                                            @include fs($cl1, 15px, 700, $ff1)
+                                        }
+
+                                        span {
+                                            color: #369;
+                                        }
+
+                                        h2 {
+                                            text-transform: uppercase;
+                                            @include fs($cl1, 25px, 700, $ff1)
+                                        }
+
+                                        a {
+                                            text-transform: uppercase;
+                                            @include fs($cl1, 13px, 700, $ff1)
+                                        }
+
+                                    }
+                                }
+
+                                .left-mega-img2 {
+                                    position: relative;
+
+                                    .overly {
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 18%;
+
+                                        h3 {
+                                            text-transform: uppercase;
+                                            @include fs(#fff, 15px, 700, $ff1)
+                                        }
+
+                                        span {
+                                            color: tomato;
+                                        }
+
+                                        h4 {
+                                            text-transform: uppercase;
+                                            @include fs(#fff, 15px, 700, $ff1)
+                                        }
+
+                                        h2 {
+                                            text-transform: uppercase;
+                                            @include fs(#fff, 25px, 700, $ff1)
+                                        }
+
+                                        a {
+                                            text-transform: uppercase;
+                                            @include fs(#fff, 13px, 700, $ff1)
+                                        }
+
+                                    }
+                                }
+
+                                .left-mega-img3 {
+                                    position: relative;
+
+                                    .overly {
+                                        position: absolute;
+                                        top: 32px;
+                                        left: 4%;
+
+                                        h3 {
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            margin-bottom: 10px;
+                                            @include fs(#ccc, 12px, 400, $ff1)
+                                        }
+
+                                        h4 {
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            margin-bottom: 10px;
+                                            @include fs(#fff, 22px, 700, $ff1)
+                                        }
+
+                                        span {
+                                            color: tomato;
+                                        }
+
+                                        a {
+                                            text-transform: uppercase;
+                                            color: #FFF;
+                                            padding: 1px 23px;
+                                            border: 3px solid #fff;
+                                            font-size: 12px;
+                                            font-weight: 600;
+                                            margin-left: 43px;
+                                            transition: all linear .3s;
+                                        }
+
+                                        &:hover a {
+                                            color: #369;
+                                            background: #fff;
+                                            background-color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                .left-mega-manu {
+                                    display: block;
+                                    margin-top: 12px;
+                                }
+                            }
+
+                            &:hover {
+                                a {
+                                    color: #369;
+                                }
+                            }
+                            .cate{
+                                
+                                 color: #369;
+                                 text-transform: uppercase;
+                                 font-weight: 600;
+                                
+                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .list-last {
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: #111;
+            margin-left: 13px;
+            padding-top: 15px;
+            font-weight: 700;
+
+        }
+
+        ul {
+            border-top: 1px solid #eee;
+
+            li {
+
+                a {
+                    color: #000 !important;
+                    font-size: 13px;
+                    font-weight: 600;
+                    line-height: 33px;
+
+                }
+
+                &:hover a {
+                    color: #369 !important;
+
+                }
+
+            }
+        }
+    }
+
+    .left-mega-img4 {
+        position: relative;
+
+        .overly {
+            position: absolute;
+            bottom: 16px;
+            left: 63%;
+
+            h4 {
+                @include fs(#111, 14px, 400, $ff1)
+            }
+
+            h3 {
+
+                @include fs(#111, 18px, 700, $ff1)
+            }
+
+            p {
+
+                @include fs(#111, 12px, 400, $ff1)
+            }
+
+            span {
+                font-weight: 700 !important;
+                color: #111;
+
+            }
+
+        }
+    }
+
+    .left-mega-img5 {
+        position: relative;
+
+        .overly {
+            position: absolute;
+            bottom: 16px;
+            left: 4%;
+
+            h4 {
+                @include fs(#fff, 14px, 400, $ff1)
+            }
+
+            h3 {
+
+                @include fs(#fff, 18px, 700, $ff1)
+            }
+
+            p {
+
+                @include fs(#fff, 12px, 400, $ff1)
+            }
+
+            span {
+                font-weight: 700 !important;
+                color: #fff;
+            }
+
+        }
+    }
+
+    .main-menu {
+        padding: 20px 0;
+
+        >ul {
+            >li {
+                >a {
+                    margin: 0 12px;
+                    color: #000;
+                    font-weight: 700;
+                    position: relative;
+                    &:after{
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: -3px;
+                        width: 100%;
+                        height: 3px;
+                        background: $cc1;
+                        transform-origin: 100% 0;
+                        transition: transform .3s;
+                        transform: scale(0) ;
+                        
+                    }
+                    &:hover{
+                        color: $cc1;
+                        &:after{
+                            transform: scale(1);
+                            transform-origin: 0 0;
+
+                        }
+                        
+                        
+                    }
+
+                    
+                }
+                i {
+                    font-size: 12px;
+                }
+
+
+                position: relative;
+
+                .mid-mega-menu {
+                    width: 800px;
+                    position: absolute;
+                    left: 0;
+                    top: 23px;
+                    visibility: hidden;
+                    transition: all linear .3s;
+                    opacity: 0;
+                    background: #fff;
+                    padding: 20px;
+                    z-index: 9999;
+                    box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.3);
+
+                    .Shop-Pages {
+                        h4 {
+                            color: #000;
+                            font-size: 15px;
+                            font-weight: 700;
+                            margin-bottom: 12px;
+                            margin-left: 11px;
+                        }
+
+                        ul {
+                            li {
+                                a {
+                                    color: #000;
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                    margin-bottom: 8px;
+                                    transition: all linear .1s;
+                                }
+
+                                &:hover a {
+                                    color: #369 !important;
+
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                &:hover .mid-mega-menu {
+                    visibility: visible;
+                    opacity: 1;
+                    top: 44px;
+                }
+            }
+        }
+
+        .sec {
+            position: relative;
+
+            .drop-menu {
+                width: 247px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: #fff;
+                padding: 20px;
+                z-index: 9999;
+                visibility: hidden;
+                transition: all linear .3s;
+                opacity: 0;
+                box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.3);
+
+                ul {
+                    li {
+
+                        // .................
+                        a {
+                            color: #000;
+                            font-weight: 400;
+
+                            .di1 {
+                                margin-left: 81px;
+                                font-size: 12px;
+                            }
+
+                            .di2 {
+                                margin-left: 77px;
+                                font-size: 12px;
+                            }
+
+                            .di3 {
+                                margin-left: 132px;
+                                font-size: 12px;
+                            }
+
+                            .di4 {
+                                margin-left: 101px;
+                                font-size: 12px;
+                            }
+
+                            .di5 {
+                                margin-left: 125px;
+                                font-size: 12px;
+                            }
+
+                            &:hover {
+                                color: #369 !important;
+
+                            }
+                        }
+
+                        position: relative;
+
+                        ul {
+                            width: 247px;
+                            position: absolute;
+                            left: 194px;
+                            top: 0;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all linear .3s;
+                            background: #fff;
+                            padding: 20px;
+                            z-index: 9999;
+                            box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.3);
+
+                            li {
+                                a {
+                                    &:hover {
+                                        color: #369 !important;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        &:hover ul {
+                            top: -23px;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &:hover .drop-menu {
+                visibility: visible;
+                opacity: 1;
+                top: 44px;
+            }
+        }
+
+    }
+
+    .menu-last {
+        padding: 20px 0;
+
+        ul {
+            li {
+
+                a {
+                    margin: 0 12px;
+                    color: black;
+
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    &:hover {
+                        color: #369 !important;
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+.active{
+    color: $cc1 !important;
+    &:after{
+        transform: scale(1) !important;
+        background: $cc1 !important;
+    }
+}

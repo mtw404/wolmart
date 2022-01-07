@@ -1,0 +1,55 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#menu {
+    .shop-border {
+        border: 1px solid #eee;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            right: 0;
+            width: 50%;
+            height: 1px;
+            background: #eee;
+            
+        }
+
+        .menu-shop {
+            >ul {
+                >li {
+                    >a {
+                        transition: all linear .3s;
+                        background: #fff;
+
+                        &:hover {
+                            color: #fff;
+                            background: $cc1;
+
+                        }
+                    }
+
+
+                    .left-menu-drop {
+                        display: none;
+                        transition: all linear .3s;
+
+                    }
+
+                    &:hover {
+                        .left-menu-drop {
+                            display: block;
+
+
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+    }
+}

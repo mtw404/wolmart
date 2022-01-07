@@ -1,0 +1,31 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+#shop-banner{
+    .s-banner{
+        padding: 70px 90px;
+        .s-text{
+            h5{
+                @include fs($cl1, 25px, 600, $ff1);
+            }
+            h2{
+                @include fs(#fff, 35px, 700, $ff1);
+                text-transform: uppercase;
+                margin: 5px 0 20px
+            }
+            a{
+                @include fs(#fff, 16px, 500, $ff1);
+                text-transform: uppercase;
+                padding: 15px 20px;
+                border: 1px solid $cl1;
+                border-radius: 5px;
+                background: $cl1;
+                transition: all linear .3s;
+                &:hover{
+                    background: #444;
+                    border-color: #444;
+                }
+            }
+        }
+        
+    }
+}

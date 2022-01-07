@@ -1,0 +1,154 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#footer {
+    padding: 53px 0 0;
+    .footer-first{
+        .footer-logo{
+            img {
+                width: 180px;
+                height: 50px;
+            }
+        }
+        .logo-text{
+            line-height: 30px;
+            p{
+                @include fs(#666, 14px, 400, $ff1);  
+            }
+            h4{
+                a{
+                    @include fs($cl1, 25px, 600, $ff1); 
+                    &:hover{
+                        color: $cc1;
+                    }
+                }
+            }
+        }
+        .footer-icon{
+            ul{
+                li{
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $cc1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    background: $cc1;
+                    cursor: pointer;
+                    a{
+                        i{
+                            color: #fff;
+                        }
+                    }
+                }
+                .f1{
+                    background: #00adef;
+                    border-color: #00adef;
+                    cursor: pointer;
+                }
+                .f2{
+                    background: #cc0000e6;
+                    border-color: #cc0000e6;
+                    cursor: pointer;
+                }
+                .f3{
+                    background:#cc0001;
+                    border-color: #cc0001;
+                    cursor: pointer;
+                }
+                .f4{
+                    background: #f96a02;
+                    border-color: #f96a02;
+                    cursor: pointer;
+                }
+            }
+        }
+        .foot-m-text{
+            .foot-item{
+                text-align: center;
+                h3{
+                    @include fs($cl1, 16px, 600, $ff1); 
+                    text-transform: uppercase;
+                }
+                ul{
+                    margin-top: 20px;
+                    li{
+                      
+                        p{
+                            @include fs(#666, 14px, 400, $ff1);
+                            line-height: 30px;
+                            transition: all linear .3s;
+                            &:hover{
+                                color: $cc1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-last{
+            padding: 25px 0;
+            position: relative;
+            margin-top: 50px;
+            ul{
+                margin: 20px 0;
+                h5{
+                    @include fs($cl1, 16px, 600, $ff1);
+                    line-height: 25px;
+                    margin-right: 10px
+                }
+                li{                    
+                    a{
+                        @include fs(#666, 14px, 400, $ff1);
+                        position: relative;
+                        padding: 0 10px;
+                        transition:  all linear .3s;
+                        &:hover{
+                            color: $cc1;
+                        }
+                        &:after{
+                            position: absolute;
+                            content: '';
+                            right: 0;
+                            top: 50%;
+                            width: 1px;
+                            height: 80%;
+                            background: rgba(0, 0, 0, 0.2);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                background: rgba(0, 0, 0, 0.2);
+            }
+            &:before{
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+        .foot-pre{
+            padding: 30px 0 ;
+            ul{
+                li{
+                    p{
+                        @include fs(#666, 14px, 400, $ff1); 
+                    }
+                }
+            }
+        }
+    } 
+}

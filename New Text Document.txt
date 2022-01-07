@@ -1,0 +1,29 @@
+
+
+                            left: 194px;
+                            top: 0;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all linear .3s;
+
+
+
+
+
+&:hover ul {    
+                            top: -23px;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+
+
+
+
+
+&:hover   {
+                        color: #007aff ;
+                        i{
+                            margin-right: 5px;
+                        }
+
+                    }

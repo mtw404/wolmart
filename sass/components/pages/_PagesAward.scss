@@ -1,0 +1,22 @@
+#pages-award{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #fafafb;
+    .page-header{
+        padding-bottom: 78px;
+        h3{
+            color: #000;
+            font-weight: 700;
+            font-size: 32px;
+        }
+    }
+    .award-img{
+        text-align: center;
+    }
+    .award-con{
+        .award-txt{
+            padding-top: 24px;
+            text-align: center;
+        }
+    }
+}

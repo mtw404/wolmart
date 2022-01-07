@@ -1,0 +1,98 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#Categories{
+    padding: 55px 0;
+    background: #ddd;
+    .categories-head{
+        h2 {
+            @include fs($cl1, 25px, 700, $ff1);
+            text-align: center;
+        }
+    }
+    .categories-total{
+        margin-top: 30px;
+        .categories-img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+           
+
+            >a {
+                overflow: hidden;
+                img {
+                    
+                    transition: all linear .3s;
+                }
+            }
+
+            &:hover {
+                a {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .categories-txt {
+                    h4 {
+                        transform: translateY(-30px);
+                        a{
+                            &:nth-child(2){
+                                color:$cc1;
+                                text-transform: uppercase;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+            .categories-txt {
+                position: absolute;
+                left: 50%;
+                bottom: 20px;
+                transform: translateX(-50%);
+                height: 30px;
+                overflow: hidden;
+
+
+                h4 {
+                    transition: all linear .3s;
+
+                    a {
+                        @include fs($cl1, 13px, 500, $ff1);
+                        
+                        &:nth-child(2){
+                            @include fs($cl1, 13px, 500, $ff1);
+                            text-transform: uppercase;
+                            position: relative;
+                            transition: all linear .3s;
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                left: 0;
+                                bottom: -3px;
+                                width: 100%;
+                                height: 3px;
+                                background: $cc1;
+                                transform: scale(0);
+                                transition: linear .3s;
+                            }
+                            &:hover {
+                                &::after {
+                                    transform: scale(1)
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+
+            }
+
+        }
+    }
+}

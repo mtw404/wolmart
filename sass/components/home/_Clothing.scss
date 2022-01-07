@@ -1,0 +1,223 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+
+#Clothing {
+    padding: 50px 0;
+
+    .clothing-head {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+
+        h2 {
+            color: #333;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 700;
+
+            i {
+                margin-left: 11px;
+            }
+        }
+    }
+
+    .clothing-left-img {
+        position: relative;
+        padding-top: 10px;
+
+        .overlay {
+            text-align: center;
+            position: absolute;
+            top: 42px;
+            left: 41px;
+
+            h5 {
+                @include fs(#666, 21px, 500, $ff1);
+                margin-bottom: 14px;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    right: 114px;
+                    top: 124%;
+                    width: 50px;
+                    height: 4px;
+                    background: $cc1;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+            }
+
+            h2 {
+                @include fs(#666, 28px, 700, $ff1);
+            }
+
+            h3 {
+                @include fs(#666, 26px, 500, $ff1);
+            }
+
+            a {
+                width: 175px;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 14px 43px;
+                background: transparent;
+                border: 2px solid #000;
+                color: #000;
+                text-transform: uppercase;
+                transition: all linear .3s;
+                display: block;
+                margin-top: 40px;
+
+                &:hover {
+                    background: #fff;
+                    border-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .clothing-main {
+        >ul {
+            >li {
+                width: 25%;
+                padding: 10px;
+
+                .clothing-img {
+                    position: relative;
+                    padding: 0;
+
+                    a {
+                        display: block;
+
+                        .L-img {
+                            display: none;
+                        }
+                        position: relative;
+                    }
+                    .sale {
+                        position: absolute;
+                        left: 12px;
+                        top: 15px;
+                        background: #f77c29;
+                        color: #fff;
+                        font-weight: 700;
+                        width: 50px;
+                        text-align: center;
+                        border-radius: 10%;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: rgba(0, 0, 0, 0.1);
+
+                        ul {
+                            position: absolute;
+                            right: 10px;
+                            top: 11px;
+                            z-index: 999;
+                            display: none;
+
+                            li {
+                                width: 36px;
+                                height: 36px;
+                                background: #fff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border: 1px solid #eee;
+                                border-radius: 50%;
+                                margin: 5px 0;
+
+                                a {
+                                    i {
+                                        color: #999;
+                                        font-size: 16px;
+
+                                    }
+
+                                }
+
+                                &:hover {
+                                    background: $cc1;
+                                    border-color: $cc1;
+                                }
+
+                                &:hover i {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .overlay {
+                            ul {
+                                display: block;
+                            }
+
+                        }
+
+                        .F-img {
+                            display: none;
+                        }
+
+                        .L-img {
+                            display: block;
+                        }
+                    }
+                }
+
+                .clothing-txt {
+                    text-align: center;
+
+                    h4 {
+                        a {
+                            @include fs($cl1, 16px, 500, $ff1);
+                        }
+                    }
+
+                    p {
+                        a {
+                            @include fs($cl1, 14px, 400, $ff1);
+                        }
+                    }
+
+                    h5 {
+                        @include fs($cl1, 18px, 500, $ff1);
+                    }
+
+                    .d-text {
+
+                        ul {
+                            li {
+                                a {
+                                    i {
+                                        color: $org;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+
+    }
+}

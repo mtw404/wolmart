@@ -1,0 +1,117 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#ForToday {
+    padding: 30px 0;
+    height: 244px;
+
+    .ForToday-img {
+        position: relative;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 50px 70px;
+
+            .ForToday-txt {
+                .big-txt {
+                    position: absolute;
+                    bottom: 64px;
+                    left: 49px;
+
+                    h4 {
+                        font-size: 70px;
+                        color: #f77c29 !important;
+                        font-weight: 700;
+                    }
+
+                    .per1 {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            background: #4f5051;
+                            width: 2px;
+                            height: 77px;
+                            transform: translateX(-50%);
+                            left: 155px;
+                            top: 12px;
+                        }
+                    }
+
+
+                    .per2 {
+                        position: absolute;
+                        left: 78px;
+                        bottom: 8px;
+                        color: chocolate;
+
+                        h5 {
+                            font-size: 26px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .per3 {
+                        position: absolute;
+                        left: 197px;
+                        bottom: 31px;
+                        color: #fff;
+                        width: 355px;
+                        font-size: 31px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+
+                    .per4 {
+                        position: absolute;
+                        left: 197px;
+                        bottom: 0;
+                        color: #fff;
+                        width: 370px;
+                        font-size: 17px;
+                        font-weight: 600;
+
+                        span {
+                            clip-path: inset(0 0 0 0);
+                            background-color: #fff;
+                            color: #000;
+
+                            .span {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                    .per5 {
+                        position: absolute;
+                        left: 826px;
+                        bottom: 10px;
+                        width: 175px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        padding: 14px 43px;
+                        background: transparent;
+                        border: 2px solid #FFF;
+                        color: #fff;
+                        text-transform: uppercase;
+                        transition: all linear .3s;
+                        display: block;
+
+
+                        &:hover {
+                            background: #fff;
+                            border-color: #fff;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

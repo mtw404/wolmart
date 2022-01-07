@@ -1,0 +1,483 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                   header part start
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+#header {
+    height: 45px;
+    background: #f5f6f8;
+    line-height: 45px;
+
+    .header-left {
+        p {
+            text-transform: uppercase;
+            @include fs($cl1, 12px, 400, $ff1)
+        }
+    }
+
+    .header-right {
+        .crnc {
+            ul {
+                li {
+                    position: relative;
+
+                    a {
+                        @include fs($cl1, 12px, 400, $ff1);
+                        margin: 0 10px;
+                    }
+
+                    ul {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.3);
+                        width: 70px;
+                        text-align: center;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all linear .3s;
+
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            left: 50%;
+                            top: -20px;
+                            transform: translateX(-50%);
+                            border-top: 10px solid transparent;
+                            border-left: 10px solid transparent;
+                            border-right: 10px solid transparent;
+                            border-bottom: 10px solid #fff;
+                        }
+
+                        li {
+                            background-color: yellow;
+                            line-height: 20px;
+
+                            a {
+                                &:hover {
+                                    color: #369;
+                                }
+                            }
+
+                        }
+                    }
+
+                    &:hover {
+                        ul {
+                            top: 100%;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-menu {
+            position: relative;
+
+            ul {
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 38%;
+                    width: 1px;
+                    height: 14px;
+                    background: #ccc;
+                }
+
+                li {
+                    a {
+                        @include fs($cl1, 12px, 400, $ff1);
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+
+        .sign-reg {
+            ul {
+                li {
+
+                    a {
+                        @include fs($cl1, 12px, 400, $ff1);
+
+                    }
+                }
+            }
+        }
+
+        .modal-dialog {
+            top: 50%;
+            transform: translateY(-50%);
+
+            .main-login {
+                padding: 50px;
+
+                .cross {
+                    position: absolute;
+                    right: 0;
+                    top: -30px;
+                    font-size: 20px;
+                    transition: all linear .3s;
+                    color: #fff;
+
+                    &:hover {
+                        transform: rotateZ(91deg);
+                        color: #fff;
+                        font-size: 25px;
+                    }
+                }
+
+                .nav {
+                    .active {
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            @include after2(0, 0, 100%, 2px, #336699);
+                        }
+
+                    }
+                }
+
+                .tabcontent {
+                    .tabpane {
+                        form {
+                            input {
+                                .blank1 {
+                                    display: block;
+                                    width: 100%;
+                                    padding: .375rem .75rem;
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                    line-height: 1.5;
+                                    color: #212529;
+                                    background-color: #fff;
+                                    background-clip: padding-box;
+                                    border: 1px solid #eee;
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    border-radius: .25rem;
+                                    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                                }
+
+                            }
+
+                            .checkboxc {
+                                margin-top: 15px;
+                            }
+
+                            .lyp {
+                                color: #a94442;
+                                margin-left: 123px;
+                                font-size: 12px;
+                                cursor: pointer;
+                                position: relative;
+                                transition: all linear .3s;
+
+                                &:hover {
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        bottom: 32%;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: red;
+                                    }
+                                }
+                            }
+
+                            .sub {
+                                padding: 6px 172px;
+                            }
+
+                            h3 {
+                                color: #666;
+                                font-size: 12px;
+                                text-align: center;
+                                margin-top: 32px;
+                            }
+
+                            .iconall {
+                                margin-left: 120px;
+
+                                ul {
+                                    li {
+                                        color: #1b4f9b;
+                                        width: 40px;
+                                        height: 40px;
+                                        border: 1px solid #000;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 50%;
+                                        margin: 28px 5px 10px;
+                                    }
+
+                                    .facebook {
+                                        border-color: #1b4f9b;
+                                        transition: all linear .3s;
+
+                                        i {
+                                            font-size: 17px;
+                                            color: #1b4f9b;
+                                        }
+
+                                        &:hover i {
+                                            color: #fff;
+                                        }
+
+                                        &:hover {
+                                            background: #1b4f9b;
+                                        }
+                                    }
+
+                                    .twitter {
+                                        border-color: #00adef;
+                                        transition: all linear .3s;
+
+                                        i {
+                                            font-size: 17px;
+                                            color: #00adef;
+                                        }
+
+                                        &:hover i {
+
+                                            color: #fff;
+                                        }
+
+                                        &:hover {
+
+                                            background: #00adef;
+                                        }
+                                    }
+
+                                    .google {
+                                        border-color: #dd4b39;
+                                        transition: all linear .3s;
+
+                                        i {
+                                            font-size: 17px;
+                                            color: #dd4b39;
+                                        }
+
+                                        &:hover i {
+
+                                            color: #fff;
+                                        }
+
+                                        &:hover {
+
+                                            background: #dd4b39;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .tabpane2 {
+                    form {
+                        p {
+                            font-size: 13px;
+                            line-height: 23px;
+
+                            span {
+                                a {
+                                    color: #007aff;
+                                    position: relative;
+
+                                    &:hover {
+                                        &::after {
+                                            position: absolute;
+                                            content: '';
+                                            bottom: 15%;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 1px;
+                                            background-color: #007aff;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        h4 {
+                            a {
+                                display: inline-block;
+                                color: #007aff;
+                                font-size: 13px;
+                                position: relative;
+
+                                &:hover {
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        bottom: -1%;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #007aff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .checkboxe {
+                        margin-top: 15px;
+                    }
+                   
+                    .formcheck{
+                        .form-check-label{
+                            color: #111;
+                            cursor: pointer;
+                           
+                            span{
+                                color: #007aff;
+                                position: relative;
+                                &:hover {
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        bottom: -1%;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #007aff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .sub2{
+                        padding: 6px 172px;
+                    }
+                    h3 {
+                        color: #666;
+                        font-size: 12px;
+                        text-align: center;
+                        margin-top: 32px;
+                    }
+
+                    .iconall {
+                        margin-left: 120px;
+
+                        ul {
+                            li {
+                                color: #1b4f9b;
+                                width: 40px;
+                                height: 40px;
+                                border: 1px solid #000;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                                margin: 28px 5px 10px;
+                            }
+
+                            .facebook {
+                                border-color: #1b4f9b;
+                                transition: all linear .3s;
+
+                                i {
+                                    font-size: 17px;
+                                    color: #1b4f9b;
+                                }
+
+                                &:hover i {
+                                    color: #fff;
+                                }
+
+                                &:hover {
+                                    background: #1b4f9b;
+                                }
+                            }
+
+                            .twitter {
+                                border-color: #00adef;
+                                transition: all linear .3s;
+
+                                i {
+                                    font-size: 17px;
+                                    color: #00adef;
+                                }
+
+                                &:hover i {
+
+                                    color: #fff;
+                                }
+
+                                &:hover {
+
+                                    background: #369;
+                                }
+                            }
+
+                            .google {
+                                border-color: #dd4b39;
+                                transition: all linear .3s;
+
+                                i {
+                                    font-size: 17px;
+                                    color: #dd4b39;
+                                }
+
+                                &:hover i {
+
+                                    color: #fff;
+                                }
+
+                                &:hover {
+
+                                    background: #dd4b39;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ul {
+                    li {
+                        button {
+                            color: black;
+                            font-weight: 700;
+                            font-size: 17px;
+                            background-color: transparent;
+                            padding: 0px 61px;
+                            text-transform: uppercase;
+                            position: relative;
+                            text-align: center;
+                            margin-right: 10px;
+                            transition: all linear.3s;
+
+                            &:hover {
+                                color: #336699;
+
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    @include after2(0, 0, 100%, 2px, #336699);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                   header part end
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

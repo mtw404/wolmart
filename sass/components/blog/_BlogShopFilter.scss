@@ -1,0 +1,237 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#blog-filter {
+    .blog-banner {
+        a {
+            overflow: hidden;
+            display: block;
+            img {
+                transition: linear .3s;
+
+            }
+        }
+        &:hover {
+            a {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    .blog-txt {
+        a {
+            color: $cc1;
+        }
+
+        h6 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        h4 {
+            font-size: 15px;
+            margin-top: 27px;
+            margin-bottom: 27px;
+            font-weight: 600;
+
+            a {
+                color: #000;
+
+                &:hover {
+                    color: $cc1;
+                }
+            }
+        }
+    }
+
+    .shop-filter-slide {
+
+        .all-cat {
+            .z_right_img {
+                margin-bottom: 5px;
+            }
+
+            .z_right_text {
+                .price {
+                    a {
+                        color: #666;
+                        font-size: 11px;
+                    }
+
+                    p {
+                        color: #666;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+
+            .logo-search {
+                position: relative;
+                margin-bottom: 33px;
+
+                button {
+                    position: absolute;
+                    top: 4px;
+                    right: 42px;
+                    background-color: transparent;
+                    border-color: transparent;
+
+                    i {
+                        color: #000;
+
+                        &:hover {
+                            color: $cc1;
+                        }
+                    }
+                }
+            }
+
+            h4 {
+                color: #000;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: "Poppins", sans-serif;
+                position: relative;
+                display: inline-block;
+                margin-bottom: 12px;
+            }
+
+            ul {
+                li {
+                    a {
+                        color: #000;
+                        font-size: 14px;
+                        font-weight: 400;
+                        font-family: "Poppins", sans-serif;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            .par {
+                a {
+                    padding: 5px 10px;
+                    background: transparent;
+                    margin-bottom: 5px;
+                    border: 1px solid #eee;
+                    color: #000;
+                    transition: all linear .3s;
+
+                    &:hover {
+                        color: $cc1;
+
+                        border: 1px solid $cc1;
+                    }
+                }
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .shop-product-main {
+        margin-top: 20px;
+
+        .product-img {
+            position: relative;
+            padding: 0;
+            margin-right: 15px;
+            transition: all linear .3s;
+        }
+
+        .product-txt {
+            margin-top: 24px;
+            margin-bottom: 24px;
+
+            p {
+                color: #000;
+            }
+
+            h4 {
+                a {
+                    padding-top: 19px;
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: $ff1;
+                }
+            }
+
+            p {
+                a {
+                    color: #999;
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-family: $ff1;
+                }
+            }
+
+            .product_price {
+                h5 {
+                    margin: 0 5px;
+                    color: $cc1;
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-family: $ff1;
+                    line-height: 27px;
+                }
+
+                .old {
+                    color: #999;
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-family: $ff1;
+                }
+            }
+
+            .rate-txt {
+                ul {
+                    li {
+                        margin: 0;
+
+                        i {
+                            color: $org;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pages {
+        margin-top: 39px;
+
+        p {
+            color: $cl1;
+            font-size: 12px;
+            font-weight: 400;
+            font-family: $ff1;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .pagination {
+            li {
+                .page-link {
+                    border: none;
+                }
+
+                a {
+                    color: #9c9a9a;
+                }
+            }
+        }
+    }
+}

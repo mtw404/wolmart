@@ -1,0 +1,179 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#daily_offer {
+
+    .zoom_part {
+        padding: 158.33px 0;
+        border: 2px solid #ddd;
+
+        .h4 {
+            @include fs(#000, 22px, 700, $ff1);
+            margin-top: -141px;
+            padding-left: 10px;
+            padding-bottom: 37px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                right: 2%;
+                bottom: 34%;
+                width: 818px;
+                height: 1px;
+                background: #e0e0e0;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+        }
+
+        .product_details {
+            h3 {
+                position: relative;
+
+                a {
+                    color: #000;
+                    @include fs(#000, 22px, 700, $ff1);
+                    margin-bottom: 41px;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    right: 9px;
+                    top: 63%;
+                    width: 399px;
+                    height: 1px;
+                    background: #e0e0e0;
+                    ;
+                    transform: translateY(-50%);
+                }
+            }
+
+        }
+
+        .product_price {
+            h4 {
+                @include fs(#000, 22px, 700, $ff1);
+                margin-bottom: 7px;
+            }
+        }
+
+        .rating {
+            ul {
+                li {
+                    a {
+                        i {
+                            color: $org;
+                        }
+
+                        .ic {
+                            color: #e4e1e1;
+
+                            &:hover {
+                                color: $org;
+                            }
+                        }
+                    }
+                }
+            }
+
+            p {
+                a {
+                    @include fs(#999, 12px, 600, $ff1);
+
+                }
+            }
+        }
+
+        .size1 {
+            h4 {
+                @include fs(#000, 15px, 500, $ff1);
+                padding-right: 9px;
+                padding-top: 17px;
+                padding-left: 5px;
+
+            }
+
+            .rat {
+                padding-top: 13px;
+
+                button {
+                    background-color: transparent;
+                    color: #000;
+                    border: 1px solid #999;
+                    padding: 0px 6px;
+
+                    a {
+                        @include fs(#000, 12px, 400, $ff1);
+                    }
+
+                    &:hover a {
+                        color: $cc1;
+                    }
+                }
+            }
+        }
+
+        .hc {
+            button {
+                background: #eee;
+                margin-top: 53px;
+                width: 59px;
+                color: #000;
+            }
+        }
+    }
+
+    .zoom_right {
+        h4 {
+            font-size: 23px;
+            font-weight: 700;
+            margin-bottom: 26px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                right: 9px;
+                bottom: -40%;
+                width: 235px;
+                height: 1px;
+                background: #e0e0e0;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+        }
+
+        .zoom_right_slider {
+            .row {
+                display: flex;
+
+                .z_right_img {
+                    margin-bottom: 19px;
+                }
+
+                .z_right_text {
+                    .price {
+                        a {
+                            font-size: 12px;
+                            font-weight: 300;
+                            color: #000;
+                        }
+
+                        ul {
+                            li {
+                                a {
+                                    i {
+                                        font-size: 12px;
+                                        color: $org;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,309 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+#logo {
+    padding: 35px 0;
+    border-bottom: 1px solid #eee;
+
+
+    .logo-search {
+        border: 2px solid #369;
+        height: 47px;
+        position: relative;
+
+        form {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                height: 35px;
+                width: 1px;
+                left: 150px;
+                top: 4px;
+                background: #e5e5e5;
+            }
+        }
+
+        select {
+            height: 40px;
+            width: 145px;
+            background: transparent;
+            border: 0;
+            padding-left: 20px;
+            font-weight: 400;
+            cursor: pointer;
+
+            option {
+                background: #fff;
+            }
+        }
+
+        input {
+            width: 305px;
+            height: 35px;
+            border: 0;
+            padding-left: 25px;
+            color: #b2b2b2;
+        }
+
+        button {
+            background: transparent;
+            border: 0;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #369;
+
+            i {
+                color: #333;
+            }
+        }
+    }
+
+    .logo-last {
+        .call {
+            a {
+                padding-left: 40px;
+                position: relative;
+
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    font-size: 30px;
+                    color: #333;
+                    transition: all linear .3s;
+                }
+                p {
+                    font-size: 13px;
+                    color: #333;
+                }
+                h4 {
+                    font-size: 16px;
+                    color: #333;
+                    font-weight: 700;
+                    transition: all linear .3s;
+                }
+                
+            }
+            &:hover h4{
+                color: #369;
+            }
+            &:hover i{
+                color: #369;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                right: 310px;
+                top: 81px;
+                height: 43px;
+                width: 1px;
+                background: #e5e5e5;
+
+            }
+
+
+        }
+
+        .wcc {
+            a {
+                padding-left: 25px;
+
+                i {
+                    font-size: 30px;
+                    color: #333;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: #333;
+                }
+
+            }
+            &:hover p
+            {
+                color: #369;
+            }
+            &:hover i
+            {
+                color: #369;
+            }
+
+        }
+
+        .wccs {
+
+            a {
+                padding-left: 50px;
+
+                i {
+                    font-size: 30px;
+                    color: #333;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: #333;
+                }
+
+            }
+
+            &:hover p
+            {
+                color: #369;
+            }
+            &:hover i
+            {
+                color: #369;
+            }
+
+        }
+
+        .cart {
+            a {
+                padding-left: 25px;
+
+                i {
+                    font-size: 30px;
+                    color: #333;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: #333;
+                }
+
+               
+            }
+            &:hover p
+            {
+                color: #369;
+            }
+            &:hover i
+            {
+                color: #369;
+            }
+
+
+            .cart2 {
+
+
+                h5 {
+                    color: #333;
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                }
+
+                .cart3 {
+
+                    .bordertop {
+                        border-top: 1px solid #eee;
+                        padding-top: 27px;
+                    }
+
+                    ul {
+
+                        position: relative;
+
+                        li {
+                            margin-bottom: 24px;
+
+                            h4 {
+                                color: #333;
+                                font-size: 21px;
+                                font-weight: 700;
+
+                                &:hover {
+                                    color: $ff1;
+                                }
+                            }
+
+
+
+                            p {
+                                color: #333;
+                                font-size: 14px;
+                                font-weight: 400;
+
+                                .rate {
+                                    color: #336699;
+                                }
+                            }
+
+
+                            img {
+                                position: relative;
+                            }
+
+                            i {
+                                width: 30px;
+                                height: 30px;
+                                position: absolute;
+                                top: -15px;
+                                right: -13px;
+                                background: #fff;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                transition: all linear .3s;
+
+                                &:hover {
+                                    color: $ff1;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .total {
+                        padding-top: 20px;
+                        border-top: 1px solid #eee;
+
+                        h4 {
+                            color: #333;
+                            font-size: 16px;
+                            margin-right: 50%;
+                            margin-top: 5px;
+                        }
+
+                        p {
+                            color: #333;
+                            font-size: 19px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    .btn {
+
+                        button {
+                            background: #FFF;
+                            color: #333;
+                            border: 2px solid #000;
+                            margin-left: 24px;
+                            padding: 5px 30px;
+                            transition: all linear.3s;
+
+                            &:hover {
+                                color: #fff;
+                                border-color: #336699;
+                                background-color: #336699;
+                            }
+                        }
+                    }
+
+                    .bb {
+                        border-top: 1px solid #000;
+
+                    }
+                }
+            }
+        }
+
+    }
+}

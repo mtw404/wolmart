@@ -1,0 +1,160 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+
+#vendor-filter {
+    .vendor-banner {
+        padding: 200px;
+        position: relative;
+
+        .overly {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #000;
+            width: 348px;
+            height: 100%;
+
+            .vendor-txt {
+                margin-left: 77px;
+                margin-top: 30px;
+            
+
+                img {
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 21px;
+                    margin-top: 20px;
+                    
+                }
+
+                h4 {
+                    margin-top: 11px;
+                    margin-top: 10px;
+                    font-size: 15px;
+
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    color: #fff;
+                }
+
+                a {
+                    margin-top: 11px;
+                    font-size: 15px;
+
+                    i {
+
+                        margin-right: 5px;
+
+                    }
+
+                    color: #fff;
+                    transition: all linear .3s;
+
+                    &:hover {
+                        color: $org;
+                    }
+                }
+
+                h5 {
+                    margin-top: 11px;
+                    i {
+
+                        margin-right: 5px;
+
+                    }
+
+                    font-size: 15px;
+                    color: #fff;
+                }
+
+                h6 {
+                    margin-top: 11px;
+                    i {
+
+                        margin-right: 5px;
+
+                    }
+
+                    font-size: 15px;
+                    color: #fff;
+                }
+                ul{
+                    li{
+                        width: 14%;
+                        
+                        a{
+                            .fac{
+                                padding: 10px 12px;
+                                transition: all linear .3s;
+                                color: #fff;
+                                &:hover{
+                                    background: $cc1;
+                                    border-color: $cc1;
+                                 }
+                            }
+                            .go{
+                                color: #fff;
+                                transition: all linear .3s;
+                                &:hover{
+                                    background-color: $org;
+                                    border-color: $org;
+                                }
+                            }
+                            .tw{
+                                color: #fff;
+                                transition: all linear .3s;
+                                &:hover{
+                                    background-color: #00adef;
+                                    border-color: #00adef;
+                                }
+                            }
+                            .pin{
+                                color: #fff;
+                                transition: all linear .3s;
+                                &:hover{
+                                    background-color: #f96a02;
+                                    border-color: #f96a02;
+                                }
+                            }
+                            .yo{
+                                color: #fff;
+                                transition: all linear .3s;
+                                &:hover{
+                                    background-color: #2c567e;
+                                    border-color: #2c567e;
+                                }
+                            }
+                            .in{
+                                color: #fff;
+                                transition: all linear .3s;
+                                &:hover{
+                                    background-color: #cc0001;
+                                    border-color: #cc0001;
+                                }
+                            }
+
+                            i{
+                                padding: 10px 10px;
+                                margin-left: 5px;
+                                background: transparent;
+                                border: 1px solid #fff;
+                                border-radius: 50%;
+                                font-size: 12px;
+                                
+                            }
+
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

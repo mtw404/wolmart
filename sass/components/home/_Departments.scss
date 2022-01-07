@@ -1,0 +1,177 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#Departments {
+    padding: 55px 0;
+
+    .row {
+        .Departments-head {
+            h2 {
+                @include fs($cl1, 25px, 700, $ff1);
+                text-align: center;
+            }
+
+        }
+    }
+
+    .Departments-menu {
+        text-align: center;
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+            button {
+                background: none;
+                @include fs($cl1, 16px, 700, $ff1);
+                margin: 0 10px;
+                border: 1px solid $cl1;
+                border-radius: 10px;
+                text-transform: uppercase;
+                transition: all linear .3s;
+
+                &:hover {
+                    color: $cc1;
+                    border-color: $cc1;
+                }
+
+            }
+
+            .active {
+                color: $cc1;
+                border-color: $cc1;
+            }
+
+        }
+    }
+
+    .Departments-body {
+        >ul {
+            >li {
+                width: 20%;
+                padding: 10px;
+
+                .Departments-img {
+                    position: relative;
+                    padding: 0;
+
+                    a {
+                        display: block;
+
+                        .L-img {
+                            display: none;
+                        }
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: rgba(0, 0, 0, 0.1);
+
+                        ul {
+                            position: absolute;
+                            right: 10px;
+                            top: 20px;
+                            z-index: 999;
+                            display: none;
+
+                            li {
+                                width: 40px;
+                                height: 40px;
+                                background: #fff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border: 1px solid #eee;
+                                border-radius: 50%;
+                                margin: 5px 0;
+
+                                a {
+                                    i {
+                                        color: #999;
+                                        
+                                    }
+                                    
+                                }
+                                &:hover {
+                                    background: $cc1;
+                                    border-color:$cc1 ;
+                                }
+                                &:hover i {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .overlay {
+                            ul {
+                                display: block;
+                            }
+
+                        }
+
+                        .F-img {
+                            display: none;
+                        }
+
+                        .L-img {
+                            display: block;
+                        }
+                    }
+                }
+
+                .Departmentsr-text {
+
+                    text-align: center;
+
+                    h4 {
+                        a {
+                            @include fs($cl1, 16px, 500, $ff1);
+                        }
+                    }
+
+                    p {
+                        a {
+                            @include fs($cl1, 14px, 400, $ff1);
+                        }
+                    }
+
+                    h5 {
+                        @include fs($cl1, 18px, 500, $ff1);
+                    }
+
+                    .dp-text {
+
+                        ul {
+                            li {
+                                a{
+                                    i {
+                                     color: $org;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

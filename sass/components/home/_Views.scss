@@ -1,0 +1,98 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+#view {
+    padding: 0 0 50px;
+
+    .view_head {
+        position: relative;
+
+        h3 {
+            @include fs($cl1, 25px, 700, $ff1);
+            margin-bottom: 50px;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -20px;
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .view_main {
+
+        ul {
+            li {
+                width: 11%;
+
+                .view_img {
+                    position: relative;
+                    
+
+                    a {
+                        display: block;
+                        transition: all linear .3s;  
+                        
+                    }
+
+                    .overlay {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.4);
+                        display: none;                       
+                        
+                        .img_name {
+                            width: 90px;
+                            margin-top: 36px;
+                            margin-left: 17px;   
+                            position: relative;
+                            &:after {
+                                position: absolute;
+                                content: '';
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 1px;
+                                background: #fff;
+                                transition: all linear .3s;
+                                display: none;
+
+                            }
+                            a {
+                                @include fs(#fff, 16px, 400, $ff1);
+                                text-align: center;
+                                transition: all linear .3s;
+                                
+                            }
+                            
+                            &:hover {
+                                &::after {
+                                    display: block;
+                                }
+                            }
+
+                        }
+                    }
+                    &:hover{
+                        .overlay{
+                            display: block;
+                        }
+                    }
+
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,203 @@
+#banner {
+    .banner-item {
+        padding: 50px 0;
+
+        .banner-img {
+            img {
+                display: block;
+                width: 100%;
+                height: 400px;
+            }
+        }
+
+
+
+        .banner-txt {
+            margin-top: 104px;
+            text-align: right;
+
+            h4 {
+                font-size: 40px;
+                font-weight: 500;
+        
+                span{
+                    border-bottom: 4px solid #f77c29;
+                }
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+                ;
+            }
+
+            h5 {
+                font-size: 23px;
+                font-weight: 300;
+               
+
+                span {
+                    color: #f77c29 !important;
+                }
+            }
+
+            a {
+                font-size: 12px;
+                font-weight: 700;
+                padding: 14px 43px;
+                background: transparent;
+                border: 2px solid #111;
+                color: #111;
+                margin-top: 19px;
+                text-transform: uppercase;
+                transition: all linear .3s;
+
+
+                &:hover {
+                    background: #111;
+                    border-color: #111;
+                    color: #fff;
+                }
+            }
+
+
+
+
+        }
+
+        .banner-txt2 {
+            text-align: left;
+            margin-top: 104px;
+
+            h4 {
+                font-size: 40px;
+                font-weight: 500;
+
+                span {
+                    color: #f77c29 !important;
+                }
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+
+            }
+
+            h5 {
+                font-size: 23px;
+                font-weight: 300;
+            }
+
+            a {
+                font-size: 12px;
+                font-weight: 700;
+                padding: 14px 43px;
+                background: transparent;
+                border: 2px solid #111;
+                color: #111;
+                margin-top: 19px;
+                text-transform: uppercase;
+                transition: all linear .3s;
+
+                &:hover {
+                    background: #111;
+                    border-color: #111;
+                    color: #fff;
+                }
+            }
+        }
+
+        .banner-txt3 {
+            text-align: right;
+            margin-top: 104px;
+
+            h4 {
+                font-size: 23px;
+                font-weight: 300;
+            }
+
+            h3 {
+                font-size: 36px;
+                font-weight: 400;
+            }
+
+            .sape {
+                border-bottom: 4px solid #f77c29;
+                h2 {
+                    font-size: 45px;
+                    font-weight: 700;
+                    clip-path: polygon(20% 0%, 100% 0%, 79% 100%, 0% 100%);
+                    background: #f77c29;
+                    color: #fff;
+
+                    span {
+                        color: transparent;
+                    }
+                }
+
+                p {
+                    font-size: 39px;
+                    font-weight: 700;
+                }
+            }
+
+            a {
+                font-size: 12px;
+                font-weight: 700;
+                padding: 14px 43px;
+                background: transparent;
+                border: 2px solid #111;
+                color: #111;
+                margin-top: 19px;
+                text-transform: uppercase;
+                transition: all linear .3s;
+
+                &:hover {
+                    background: #111;
+                    border-color: #111;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+
+        li {
+            button {
+                font-size: 0;
+                width: 10px;
+                height: 10px;
+                border: 1px solid #eee;
+                background: transparent;
+                border-radius: 50%;
+                margin: 0 5px;
+                transition: all linear .3s;
+
+                &:hover {
+                    background-color: #666;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    width: 20px;
+                    height: 10px;
+                    border-radius: 40%;
+                    background: #369;
+                    border-color: #369;
+
+                }
+
+            }
+        }
+
+
+    }
+}

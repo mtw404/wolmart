@@ -1,0 +1,38 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#Clients{
+    padding: 10px 0 50px;
+    .clothing-head {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+
+        h2 {
+            color: #333;
+            font-size: 25px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 700;
+
+            i {
+                margin-left: 11px;
+            }
+        }
+    }
+    .client_main{
+        margin-top: 50px;
+        .client_item{
+            ul{
+                .band{
+                    width: 192px;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

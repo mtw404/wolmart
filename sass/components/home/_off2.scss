@@ -1,0 +1,109 @@
+@import '../../mixins/mixins';
+@import '../../variables/variable';
+
+#off2-part {
+    padding: 30px 0;
+
+    .off2-img {
+        position: relative;
+
+        .overlay {
+            position: absolute;
+            left: 31px;
+            top: 28px;
+            text-align: left;
+
+            h4 {
+                font-size: 20px;
+                font-weight: 500;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                font-size: 29px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #fff;
+            }
+
+            a {
+                color: #fff;
+                margin-top: 18px;
+                text-transform: uppercase;
+                font-weight: 600;
+                &:hover{
+                    color: #fff;
+                }
+                &::after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: 0;
+                    width: 38%;
+                    height: 2px;
+                    background: #fff;
+                    transform: scale(0);
+                    transition: linear.3s;
+                }
+                &:hover {
+
+                    &::after {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+
+    .off2-img2 {
+        position: relative;
+
+        .overlay {
+            position: absolute;
+            left: 31px;
+            top: 28px;
+            text-align: left;
+
+            h4 {
+                font-size: 20px;
+                font-weight: 500;
+                color: #000;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                font-size: 29px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #000;
+            }
+
+            a {
+                color: #000;
+                text-transform: uppercase;
+                margin-top: 18px;
+                font-weight: 600;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: 0;
+                    width: 36%;
+                    height: 2px;
+                    background: #000;
+                    transform: scale(0);
+                    transition: linear.3s;
+                }
+                &:hover {
+
+                    &::after {
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            
+        }
+    }
+}

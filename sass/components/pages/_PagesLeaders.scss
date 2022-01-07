@@ -1,0 +1,97 @@
+#Pages-leader {
+    padding-top: 92px;
+    padding-bottom: 92px;
+
+    .pages-leader-header {
+        padding-bottom: 32px;
+
+        h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        p {
+            padding: 0 255px;
+        }
+    }
+
+    .leader-img {
+        position: relative;
+        transition: all linear .3s;
+        img{
+            border-radius: 1.3rem;
+        }
+
+        .overly {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: all linear .3s;
+            border-radius: 1.3rem;
+
+            ul {
+                position: absolute;
+                right: 55px;
+                top: 60%;
+                transition: all linear .3s;
+            }
+
+            a {
+                width: 46px;
+                height: 46px;
+                color: #fffefe;
+                border: 3px solid #fff;
+                line-height: 47px;
+                margin-left: 10px;
+                border-radius: 50%;
+                transition: all linear .3s;
+
+                i {
+                    font-size: 23px;
+                }
+            }
+            .fa{
+               &:hover{
+                background: #1b4f9b;
+                border-color: #1b4f9b;
+               }
+            }
+            .tw{
+                &:hover{
+                 background: #00adef;
+                 border-color: #00adef;
+                }
+             }
+             .ins{
+                &:hover{
+                 background: #cc0001;
+                 border-color: #cc0001;
+                }
+             }
+        }
+
+        &:hover .overly {
+            opacity: 1;
+        }
+        &:hover ul{
+                top: 43%;
+        }
+    }
+    .leader-txt{
+        text-align: center;
+        h4{
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 22px;
+        }
+        p{
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+}
